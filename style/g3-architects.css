@@ -3,6 +3,8 @@
 
 body {
     font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0  
 }
 
 /* shared item  */
@@ -11,6 +13,11 @@ header {
     background: rgba(255, 144, 14, 0.10);
     padding: 50px 240px;
 }
+
+.text-light-gray {
+    color: #727272;
+}
+
 
 .btn-praimary {
     border-radius: 8px;
@@ -29,7 +36,7 @@ nav {
     align-items: center;
 }
 
-.nav-title {
+.section-title {
     color: #131313;
     font-size: 45px;
     font-weight: 700;
@@ -66,14 +73,105 @@ nav li a {
     color: #131313;
 }
 
-.banner-description {
-    color: #727272;
-}
+
 
 .banner img {
     margin-top: 20px;
     width: 100%;
 }
+
+/* main style */
+main {
+    max-width: 1100px;
+     margin: 70px auto;
+}
+
+/* teams style */
+.teams-container {
+    display: flex;
+    align-items: center;
+}
+
+.teams-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.teams-content {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.teams-title {
+    font-size: 2.8rem;
+}
+
+.teams-title .Quick-list {
+    color: #727272;
+    font-weight: 500;
+
+}
+
+.teams-title .text-feature {
+    color: #FF900E;
+    font-weight: 700;
+}
+
+/* facts section */
+.facts-card-container{
+     display: flex;
+     justify-content: space-around;
+
+}
+
+.facts-card-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+ 
+}
+.facts-card-container .card-stats{
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}   
+
+/* sponsors style */
+.Sponsors{
+    text-align: center;
+}
+.Sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+    /* .teams-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }  */
+
+.Sponsors-img-container img{
+    width: 165px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -81,40 +179,42 @@ nav li a {
 
 /* responsive work  */
 @media screen and (max-width:576px) {
-    header{
+    header {
         padding: 20px;
     }
-    nav{
+
+    main {
+        margin: 70px 10px;
+    }
+
+
+    nav,
+    .teams-container,
+    .facts-card-container,
+    .Sponsors-img-container
+     {
         flex-direction: column;
     }
-    
+
+    .teams-image-container {
+        grid-template-columns: 1fr;
+    }
+
+
 }
- @media screen and(min-width:576px) and (max-width:960px) {
-    header{
+    /* medium device  */
+
+@media screen and(min-width:576px) and (max-width:960px) {
+    header {
         padding: 50px;
     }
-    nav{
+
+    nav,
+    .teams-container,
+    .Sponsors-img-container
+    {
         flex-direction: column;
     }
-    
-    
- }
+ 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
